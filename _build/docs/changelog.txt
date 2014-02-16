@@ -1,0 +1,5 @@
+Changelog for Cybershop site
+
+Cybershop-site 1.0
+====================================
+- Fixed bugs

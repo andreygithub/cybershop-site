@@ -1,0 +1,199 @@
+/*
+* MODX Console Output
+*
+* @date 2013-12-05 00:05:49
+*/
+Пробуем установить пакет с подписью: cybershop_site-1.0.0-beta
+
+Пакет найден... сейчас идёт подготовка к его установке.
+
+Загрузка рабочего пространства пакета...
+
+Рабочее пространство загружено, сейчас устанавливаем пакет...
+
+Created table `modx_cybershop_catalog`
+SQL: CREATE TABLE `modx_cybershop_catalog` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `description` VARCHAR(255) NOT NULL DEFAULT '', `article` VARCHAR(255) NOT NULL DEFAULT '', `url` VARCHAR(255) NOT NULL DEFAULT '', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `made_in` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `media` VARCHAR(255) NOT NULL DEFAULT '', `brand` INT(10) NOT NULL DEFAULT '0', `category` INT(10) NOT NULL DEFAULT '0', `rating` DECIMAL(12,2) NOT NULL DEFAULT '0', `rating_num` DECIMAL(12) NOT NULL DEFAULT '0', `stars` DECIMAL(12,2) NOT NULL DEFAULT '0', `stars_num` DECIMAL(12) NOT NULL DEFAULT '0', `like` DECIMAL(12) NOT NULL DEFAULT '0', `popular` DECIMAL(12) NOT NULL DEFAULT '0', `price1` DECIMAL(12,2) NOT NULL DEFAULT '0', `price2` DECIMAL(12,2) NOT NULL DEFAULT '0', `price3` DECIMAL(12,2) NOT NULL DEFAULT '0', `weight` DECIMAL(12,3) NOT NULL DEFAULT '0', `value1` DECIMAL(12,3) NOT NULL DEFAULT '0', `value2` DECIMAL(12,3) NOT NULL DEFAULT '0', `value3` DECIMAL(12,3) NOT NULL DEFAULT '0', `createdby` INT(10) NOT NULL DEFAULT '0', `createdon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `editedby` INT(10) NOT NULL DEFAULT '0', `editedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `properties` TEXT NULL, `active` TINYINT(1) unsigned NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', `deletedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `deletedby` INT(10) NOT NULL DEFAULT '0', `new` TINYINT(1) unsigned NOT NULL DEFAULT '0', `sellout` TINYINT(1) unsigned NOT NULL DEFAULT '0', `discount` TINYINT(1) unsigned NOT NULL DEFAULT '0', `onhomepage` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `new` (`new`), INDEX `sellout` (`sellout`), INDEX `discount` (`discount`), INDEX `onhomepage` (`onhomepage`), INDEX `price1` (`price1`), INDEX `price2` (`price2`), INDEX `price3` (`price3`), INDEX `name` (`name`), INDEX `article` (`article`), INDEX `brand` (`brand`), INDEX `category` (`category`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_catalogfiltertable`
+SQL: CREATE TABLE `modx_cybershop_catalogfiltertable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `filteritem` INT(10) NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `filteritem` (`filteritem`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_catalogpropertytable`
+SQL: CREATE TABLE `modx_cybershop_catalogpropertytable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `value` TEXT NOT NULL, `property` INT(10) NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `property` (`property`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_catalogimagetable`
+SQL: CREATE TABLE `modx_cybershop_catalogimagetable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `name` VARCHAR(255) NOT NULL DEFAULT '', `image` VARCHAR(255) NOT NULL DEFAULT '', `fulltext` TEXT NOT NULL, `sort_position` INT(10) NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_catalogcomplecttable`
+SQL: CREATE TABLE `modx_cybershop_catalogcomplecttable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `name` VARCHAR(255) NOT NULL DEFAULT '', `description` VARCHAR(255) NOT NULL DEFAULT '', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `url` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `amount` INT(15) NOT NULL DEFAULT '0', `price1` DECIMAL(12,2) NOT NULL DEFAULT '0', `price2` DECIMAL(12,2) NOT NULL DEFAULT '0', `price3` DECIMAL(12,2) NOT NULL DEFAULT '0', `weight` DECIMAL(12,3) NOT NULL DEFAULT '0', `value1` DECIMAL(12,3) NOT NULL DEFAULT '0', `value2` DECIMAL(12,3) NOT NULL DEFAULT '0', `value3` DECIMAL(12,3) NOT NULL DEFAULT '0', `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_catalogsimilartable`
+SQL: CREATE TABLE `modx_cybershop_catalogsimilartable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `similarelement` INT(10) NOT NULL DEFAULT '0', `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `similarelement` (`similarelement`)) ENGINE=MyISAM
+
+
+Could not create table `modx_cybershop_catalogcommenttable`
+SQL: CREATE TABLE `modx_cybershop_catalogcommenttable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `catalog` INT(10) NOT NULL DEFAULT '0', `rate` INT(10,2) NOT NULL DEFAULT '0', `rate_num` INT(10) NOT NULL DEFAULT '0', `properties` TEXT NULL, `answer` TINYINT(1) unsigned NOT NULL DEFAULT '1', `answer_id` INT(10) NOT NULL DEFAULT '0', `active` TINYINT(1) unsigned NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', `deletedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `deletedby` INT(10) NOT NULL DEFAULT '0', `createdby` INT(10) NOT NULL DEFAULT '0', `createdon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `editedby` INT(10) NOT NULL DEFAULT '0', `editedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, PRIMARY KEY (`id`), INDEX `catalog` (`catalog`), INDEX `active` (`active`), INDEX `deleted` (`deleted`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] =&gt; 42000
+    [1] =&gt; 1064
+    [2] =&gt; You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2) NOT NULL DEFAULT '0', `rate_num` INT(10) NOT NULL DEFAULT '0', `properties` T' at line 1
+)
+
+
+Created table `modx_cybershop_brand`
+SQL: CREATE TABLE `modx_cybershop_brand` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `parent` INT(10) NOT NULL DEFAULT '0', `isfolder` TINYINT(1) unsigned NOT NULL DEFAULT '0', `description` VARCHAR(255) NOT NULL DEFAULT '', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `media` VARCHAR(255) NOT NULL DEFAULT '', `url` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `name` (`name`), INDEX `parent` (`parent`), INDEX `isfolder` (`isfolder`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_brandtable`
+SQL: CREATE TABLE `modx_cybershop_brandtable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `brand` INT(10) NOT NULL DEFAULT '0', `filter` INT(10) NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `brand` (`brand`), INDEX `filter` (`filter`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_category`
+SQL: CREATE TABLE `modx_cybershop_category` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `parent` INT(10) NOT NULL DEFAULT '0', `isfolder` TINYINT(1) unsigned NOT NULL DEFAULT '0', `description` VARCHAR(255) NOT NULL DEFAULT '', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `media` VARCHAR(255) NOT NULL DEFAULT '', `image` VARCHAR(255) NOT NULL DEFAULT '', `url` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `name` (`name`), INDEX `parent` (`parent`), INDEX `isfolder` (`isfolder`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_categorytable`
+SQL: CREATE TABLE `modx_cybershop_categorytable` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `category` INT(10) NOT NULL DEFAULT '0', `filter` INT(10) NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `category` (`category`), INDEX `filter` (`filter`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_filter`
+SQL: CREATE TABLE `modx_cybershop_filter` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `parent` INT(10) NOT NULL DEFAULT '0', `isfolder` TINYINT(1) unsigned NOT NULL DEFAULT '0', `description` VARCHAR(255) NOT NULL DEFAULT '', `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `type` TINYINT(10) NOT NULL DEFAULT '1', `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `name` (`name`), INDEX `parent` (`parent`), INDEX `isfolder` (`isfolder`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_filteritem`
+SQL: CREATE TABLE `modx_cybershop_filteritem` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `filter` INT(10) NOT NULL DEFAULT '0', `name` VARCHAR(255) NOT NULL DEFAULT '', `description` TEXT NULL, `image` VARCHAR(255) NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) unsigned NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `filter` (`filter`), INDEX `name` (`name`), INDEX `sort_position` (`sort_position`), INDEX `active` (`active`), INDEX `deleted` (`deleted`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_property`
+SQL: CREATE TABLE `modx_cybershop_property` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `description` VARCHAR(255) NOT NULL DEFAULT '', `shortname` VARCHAR(255) NOT NULL, `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `xtype` VARCHAR(75) NOT NULL DEFAULT 'textfield', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `name` (`name`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_deliveries`
+SQL: CREATE TABLE `modx_cybershop_deliveries` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` TEXT NULL, `price` DECIMAL(12,2) NOT NULL DEFAULT '0', `weight_price` DECIMAL(12,2) NOT NULL DEFAULT '0', `distance_price` DECIMAL(12,2) NOT NULL DEFAULT '0', `image` VARCHAR(255) NULL, `rank` TINYINT(1) unsigned NOT NULL DEFAULT '0', `class` VARCHAR(50) NULL, `properties` TEXT NULL, `requires` VARCHAR(255) NULL DEFAULT 'email,receiver', `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `sort_position` (`sort_position`), INDEX `active` (`active`), INDEX `deleted` (`deleted`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_payments`
+SQL: CREATE TABLE `modx_cybershop_payments` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` TEXT NULL, `image` VARCHAR(255) NULL, `rank` TINYINT(1) unsigned NOT NULL DEFAULT '0', `class` VARCHAR(50) NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) unsigned NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `sort_position` (`sort_position`), INDEX `active` (`active`), INDEX `deleted` (`deleted`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_currency`
+SQL: CREATE TABLE `modx_cybershop_currency` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `shortname` VARCHAR(255) NOT NULL, `description` TEXT NULL, `rate` DECIMAL(12,5) NOT NULL DEFAULT '0', `image` VARCHAR(255) NULL, `main` TINYINT(1) unsigned NOT NULL DEFAULT '0', `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) unsigned NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_store`
+SQL: CREATE TABLE `modx_cybershop_store` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `description` VARCHAR(255) NOT NULL DEFAULT '', `shortname` VARCHAR(255) NOT NULL, `introtext` TEXT NOT NULL, `fulltext` TEXT NOT NULL, `image` VARCHAR(255) NOT NULL DEFAULT '', `ceo_data` VARCHAR(255) NOT NULL DEFAULT '', `ceo_key` VARCHAR(255) NOT NULL DEFAULT '', `ceo_description` TEXT NOT NULL, `properties` TEXT NULL, `sort_position` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `deleted` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), INDEX `name` (`name`), INDEX `active` (`active`), INDEX `deleted` (`deleted`), INDEX `sort_position` (`sort_position`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_orders`
+SQL: CREATE TABLE `modx_cybershop_orders` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `user_id` INT(10) unsigned NOT NULL, `status` INT(10) unsigned NOT NULL DEFAULT '0', `delivery` INT(10) unsigned NOT NULL DEFAULT '0', `payment` INT(10) unsigned NOT NULL DEFAULT '0', `address` INT(10) unsigned NOT NULL DEFAULT '0', `createdon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `updatedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `num` VARCHAR(20) NULL, `cost` DECIMAL(12,2) NOT NULL DEFAULT '0', `cart_cost` DECIMAL(12,2) NOT NULL DEFAULT '0', `delivery_cost` DECIMAL(12,2) NOT NULL DEFAULT '0', `weight` DECIMAL(13,3) NOT NULL DEFAULT '0', `context` VARCHAR(100) NOT NULL DEFAULT 'web', `comment` TEXT NULL, `properties` TEXT NULL, PRIMARY KEY (`id`), INDEX `user_id` (`user_id`), INDEX `status` (`status`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_order_statuses`
+SQL: CREATE TABLE `modx_cybershop_order_statuses` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, `description` TEXT NULL, `color` CHAR(6) NOT NULL DEFAULT '000000', `email_user` TINYINT(1) NOT NULL DEFAULT '0', `email_manager` TINYINT(1) NOT NULL DEFAULT '0', `subject_user` VARCHAR(255) NOT NULL, `subject_manager` VARCHAR(255) NOT NULL, `body_user` INT(10) NULL DEFAULT '0', `body_manager` INT(10) NULL DEFAULT '0', `active` TINYINT(1) NOT NULL DEFAULT '1', `final` TINYINT(1) NOT NULL DEFAULT '0', `fixed` TINYINT(1) NOT NULL DEFAULT '0', `rank` TINYINT(1) unsigned NOT NULL DEFAULT '0', `editable` TINYINT(1) NOT NULL DEFAULT '1', PRIMARY KEY (`id`), INDEX `active` (`active`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_order_logs`
+SQL: CREATE TABLE `modx_cybershop_order_logs` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `user_id` INT(10) unsigned NOT NULL DEFAULT '0', `order_id` INT(10) unsigned NOT NULL DEFAULT '0', `timestamp` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `action` VARCHAR(100) NOT NULL DEFAULT '', `entry` VARCHAR(255) NOT NULL DEFAULT '0', `ip` TEXT NOT NULL, PRIMARY KEY (`id`), INDEX `user_id` (`user_id`), INDEX `order_id` (`order_id`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_order_addresses`
+SQL: CREATE TABLE `modx_cybershop_order_addresses` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `user_id` INT(10) unsigned NOT NULL, `createdon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `updatedon` DATETIME NULL DEFAULT '0000-00-00 00:00:00', `receiver` VARCHAR(255) NULL, `phone` VARCHAR(20) NULL, `country` VARCHAR(100) NULL, `index` VARCHAR(50) NULL, `region` VARCHAR(100) NULL, `city` VARCHAR(100) NULL, `metro` VARCHAR(255) NULL, `street` VARCHAR(255) NULL, `building` VARCHAR(10) NULL, `room` VARCHAR(10) NULL, `comment` TEXT NULL, `properties` TEXT NULL, PRIMARY KEY (`id`), INDEX `user_id` (`user_id`)) ENGINE=MyISAM
+
+
+Created table `modx_cybershop_order_products`
+SQL: CREATE TABLE `modx_cybershop_order_products` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `product_id` INT(10) unsigned NOT NULL, `order_id` INT(10) unsigned NOT NULL, `complect_id` INT(10) unsigned NOT NULL, `count` INT(10) unsigned NOT NULL DEFAULT '1', `price` DECIMAL(12,2) NOT NULL DEFAULT '0', `weight` DECIMAL(13,3) NOT NULL DEFAULT '0', `cost` DECIMAL(12,2) NOT NULL DEFAULT '0', `options` TEXT NULL, PRIMARY KEY (`id`), INDEX `product_id` (`product_id`), INDEX `order_id` (`order_id`)) ENGINE=MyISAM
+
+
+Attempting to preserve files at /home/andrey/Dev/www/modxh/core/components/ace into archive /home/andrey/Dev/www/modxh/core/packages/ace-1.4.2-pl/modPlugin/c5d60ae5e4c0435acb1497ef89f990d8.1.preserved.zip
+
+Attempting to set which_element_editor setting to Ace.
+
+Attempting to preserve files at /home/andrey/Dev/www/modxh/core/components/ckeditor into archive /home/andrey/Dev/www/modxh/core/packages/ckeditor-1.1.0-rc1/modPlugin/dcdb843f0a563b5ed75b53ce4478236f.1.preserved.zip
+
+Attempting to set which_editor setting to CKEditor.
+
+Installing files from /home/andrey/Dev/www/modxh/core/packages/translit-1.0.0-beta/xPDOFileVehicle/319ab5b31863cd1c8b088dc71e376628/ to /home/andrey/Dev/www/modxh/core/components/translit
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+The native key provided in the vehicle does not match the primary key field(s) for the object: 
+
+Trying to install ace. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 0. Please wait...
+
+Загрузка рабочего пространства пакета...
+
+Рабочее пространство загружено, сейчас устанавливаем пакет...
+
+0 was successfully installed
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 1. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 2. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 3. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 4. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 5. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 6. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 7. Please wait...
+
+
+
+PHP warning: array_merge(): Argument #2 is not an array
+
+Trying to install 8. Please wait...
+
+
+
+Успешно установлен пакет cybershop_site-1.0.0-beta
+
+
+/* EOF */

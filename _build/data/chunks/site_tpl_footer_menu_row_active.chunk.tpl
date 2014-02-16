@@ -1,0 +1,1 @@
+[[+id:is=`[[++cybershop.res_catalog_id]]`:then=``:else=`<li class="active"><a href="[[~[[+id]]]]">[[+menutitle]]</a></li>`]]
